@@ -1,0 +1,253 @@
+/* =====================================
+   🔹 BODY SETUP & GLOBAL PAGE LAYOUT
+===================================== */
+
+/* Sets base font, full-screen background image, and vertical layout using flexbox */
+body {
+  font-family: Arial, sans-serif;
+  background: url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Acts as a wrapper to make footer stick to the bottom if content is small */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* =====================================
+   🔹 NAVBAR SECTION
+===================================== */
+
+/* Top navigation bar with glassmorphism blur and fixed positioning */
+.navbar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Flex layout for navbar content */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin-left: 0%;
+}
+
+/* Title/logo style inside navbar */
+.nav-title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2em;
+  color: #8e44ec;
+}
+
+/* Navigation link list layout */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for each nav link */
+.nav-links a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+  color: #8e44ec;
+}
+
+
+/* =====================================
+   🔹 MAIN CONTAINER STYLING
+===================================== */
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(8, 147, 91, 0.964);
+  width: 90%;
+  max-width: 400px;
+  color: white;
+  margin: 90px auto 20px;
+  padding-top: 80px; /* replaces margin-top: 10% for consistent space below navbar */
+  margin-top: 9%;
+}
+
+
+/* =====================================
+   🔹 INPUT FIELD & BUTTON STYLES
+===================================== */
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* makes input and button stack on small screens */
+}
+
+input[type="text"] {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  width: 65%;
+  font-size: 1em;
+  outline: none;
+  background: rgba(255,255,255,0.95);
+  color: #333;
+  font-weight: 500;
+  min-width: 200px;
+}
+
+button {
+  padding: 12px 18px;
+  background-color: #8e44ec;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #732d91;
+  transform: translateY(-2px);
+}
+
+
+/* =====================================
+   🔹 WEATHER RESULT STYLING
+===================================== */
+
+.weather-info {
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 1.1em;
+  margin-top: 25px;
+  padding: 10px 0;
+  line-height: 1.6em;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.weather-info img {
+  width: 100px;
+  margin: 10px 0;
+}
+
+
+/* =====================================
+   🔹 ERROR MESSAGE STYLE
+===================================== */
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+
+/* =====================================
+   🔹 FOOTER SECTION
+===================================== */
+
+.footer {
+  background-color: #333;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+/* =====================================
+   🔹 MEDIA QUERIES FOR RESPONSIVENESS
+===================================== */
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 10px 20px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container {
+    margin-top: 120px;
+    width: 95%;
+    padding: 20px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .input-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-title {
+    font-size: 1.5em;
+  }
+
+  .weather-info {
+    font-size: 1em;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 🌐 Character encoding for proper text rendering -->
+  <meta charset="UTF-8" />
+
+  <!-- 📱 Responsive viewport setup for mobile-friendly design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 🏷️ Title shown in the browser tab -->
+  <title>Weather App</title>
+
+  <!-- 🎨 Linking the external stylesheet for layout and styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- 🔳 MAIN WRAPPER: Ensures sticky footer & page layout using flexbox -->
+  <div class="page-wrapper">
+
+    <!-- 🔹 NAVIGATION BAR: Top fixed bar for branding and navigation links -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- 🔠 APP TITLE: Shown on the left of the navbar -->
+        <h1 class="nav-title"> Weather Ninja </h1>
+
+        <!-- 🔗 NAV LINKS: Menu links to navigate to other sections/pages -->
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 🧊 MAIN CONTAINER: Input field, weather display, and error message -->
+    <div class="container">
+      <!-- 📝 Title of the input form section -->
+      <h1>SEARCH</h1>
+
+      <!-- 🔍 FORM SECTION: Handles city input and submit action -->
+      <form class="input-section">
+        <!-- 🌆 City input field where user types a city name -->
+        <input type="text" id="cityInput" placeholder="Enter city name" />
+
+        <!-- 🚀 Submit button to trigger weather fetch -->
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- 📡 WEATHER OUTPUT: Dynamic content populated using JavaScript -->
+      <div id="weatherResult" class="weather-info">
+        <!-- Weather data (like temperature, icon, etc.) will appear here -->
+      </div>
+
+      <!-- ❌ ERROR DISPLAY: Shown when an invalid city is entered or API fails -->
+      <div id="error" class="error-message"></div>
+    </div>
+
+    <!-- 🔻 FOOTER: Copyright and legal notice -->
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 Weather Ninja. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 💡 JavaScript file to handle form interaction and API fetching -->
+  <script src="script.js"></script>
+</body>
+</html>
