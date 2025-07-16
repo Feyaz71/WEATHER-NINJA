@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const errorMessage = document.querySelector('.error-message');  // Selects the container to display error messages
 
   // 🔑 Your OpenWeatherMap API key (replace with your own API key if needed)
-  const apiKey = '55a3b264c4efa1e1fd3cc2f252ef426a';
+  const apiKey = 'api key';
 
   // 🧠 Handle form submission
   form.addEventListener('submit', async (e) => {
